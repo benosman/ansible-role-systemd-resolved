@@ -1,10 +1,5 @@
 ---
 
-- name: install systemd
-  pacman:
-    name: systemd
-    state: present
-
 - name: configure systemd-resolved
   template:
     src: resolved.conf.j2
@@ -31,4 +26,4 @@
     dest: /etc/resolv.conf
     state: link
 
-...
+
